@@ -1,0 +1,15 @@
+﻿@page "/monthlywinners"
+@using Zwift_Challenge.Data
+@inject ZwiftChallengeService _zwiftChallengeService
+
+
+
+@code {
+    private string winner;
+    protected override async Task OnInitializedAsync()
+    {
+        winner = await _zwiftChallengeService.GetWinner();
+    }
+}
+
+
