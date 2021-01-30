@@ -1,0 +1,48 @@
+﻿@using Zwift_Challenge.Data
+@using Radzen.Blazor
+@inject Data.ZwiftChallengeService _zwiftChallengeService
+
+
+<div>
+    <div style="display: flex;">
+        <div>Rider</div>
+        <div>Date</div>
+        <div>Distance</div>
+        <div>Time</div>
+        <div>Elevation</div>
+        <div>Calories</div>
+    </div>
+    @foreach(var workout in workouts)
+    {
+        <WorkoutRow WorkoutData="workout"></WorkoutRow>
+    }
+
+    <RadzenGrid Count="3" Data="@workouts" AllowSorting="true" TItem="WorkoutData">
+        <Columns>
+            <RadzenGridColumn TItem="WorkoutData" Property="Rider" Title="Rider" />
+            <RadzenGridColumn TItem="WorkoutData" Property="Date" Title="Date" />
+            <RadzenGridColumn TItem="WorkoutData" Property="Distance" Title="Dist" />
+            <RadzenGridColumn TItem="WorkoutData" Property="Time" Title="Time" />
+            <RadzenGridColumn TItem="WorkoutData" Property="Elevation" Title="Elev" />
+            <RadzenGridColumn TItem="WorkoutData" Property="Calories" Title="Cals" />
+        </Columns>
+    </RadzenGrid>
+</div>
+
+@code {
+    [CascadingParameter]
+    public string Month { get; set; } = "January";
+
+    private IEnumerable<WorkoutData> workouts;
+
+    protected override async Task OnParametersSetAsync()
+    {
+        workouts = await GetWorkouts();
+    }
+
+    private async Task<IEnumerable<WorkoutData>> GetWorkouts()
+    {
+        return await _zwiftChallengeService.GetWorkoutsByMonth(Month);
+    }
+
+}

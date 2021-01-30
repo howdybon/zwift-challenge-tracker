@@ -1,0 +1,40 @@
+﻿@using Data
+
+
+<div style="display: grid; 
+    grid-template-columns: repeat(6, auto); 
+    margin: 10px;">
+
+    <div class="workout-row-cell-style">
+        @WorkoutData.Rider
+    </div>
+    <div class="workout-row-cell-style">
+        @WorkoutData.Date.ToShortDateString()
+    </div>
+    <div class="workout-row-cell-style">
+        @WorkoutData.Distance
+    </div>
+    <div class="workout-row-cell-style">
+        @WorkoutData.Time.ToString()
+    </div>
+    <div class="workout-row-cell-style">
+        @WorkoutData.Elevation
+    </div>
+    <div class="workout-row-cell-style">
+        @WorkoutData.Calories
+    </div>
+</div>
+
+<style>
+    .workout-row-cell-style {
+        border: 1px solid darkred;
+        background: goldenrod;
+        padding: 10px;
+    }
+</style>
+
+
+@code {
+    [Parameter]
+    public WorkoutData WorkoutData { get; set; }
+}
