@@ -1,65 +1,77 @@
-[
-  {
-    "Date": "2021-02-02T00:00:00",
-    "Rider": "Parker",
-    "Time": {
-      "Ticks": 86030000000,
-      "Days": 0,
-      "Hours": 2,
-      "Milliseconds": 0,
-      "Minutes": 23,
-      "Seconds": 23,
-      "TotalDays": 0.09957175925925926,
-      "TotalHours": 2.3897222222222223,
-      "TotalMilliseconds": 8603000,
-      "TotalMinutes": 143.38333333333333,
-      "TotalSeconds": 8603
+  [
+  
+  
+  
+    {
+      "Date": "2021-02-02T00:00:00",
+      "Rider": "Parker",
+      "Time": {
+        "Ticks": 86030000000,
+        "Days": 0,
+        "Hours": 2,
+        "Milliseconds": 0,
+        "Minutes": 23,
+        "Seconds": 23,
+        "TotalDays": 0.09957175925925926,
+        "TotalHours": 2.3897222222222223,
+        "TotalMilliseconds": 8603000,
+        "TotalMinutes": 143.38333333333333,
+        "TotalSeconds": 8603
+      },
+      "Distance": 78.34,
+      "Elevation": 234,
+      "Calories": 1234,
+      "Route": "Volcano"
     },
-    "Distance": 78.34,
-    "Elevation": 234,
-    "Calories": 1234,
-    "Route": "Volcano"
-  },
-  {
-    "Date": "2021-02-02T00:00:00",
-    "Rider": "Payton",
-    "Time": {
-      "Ticks": 14030000000,
-      "Days": 0,
-      "Hours": 0,
-      "Milliseconds": 0,
-      "Minutes": 23,
-      "Seconds": 23,
-      "TotalDays": 0.016238425925925927,
-      "TotalHours": 0.38972222222222225,
-      "TotalMilliseconds": 1403000,
-      "TotalMinutes": 23.383333333333333,
-      "TotalSeconds": 1403
+
+
+    {
+      "Date": "2021-02-02T00:00:00",
+      "Rider": "Payton",
+      "Time": {
+        "Ticks": 14030000000,
+        "Days": 0,
+        "Hours": 0,
+        "Milliseconds": 0,
+        "Minutes": 23,
+        "Seconds": 23,
+        "TotalDays": 0.016238425925925927,
+        "TotalHours": 0.38972222222222225,
+        "TotalMilliseconds": 1403000,
+        "TotalMinutes": 23.383333333333333,
+        "TotalSeconds": 1403
+      },
+      "Distance": 7.34,
+      "Elevation": 23,
+      "Calories": 123,
+      "Route": "Volcano"
     },
-    "Distance": 7.34,
-    "Elevation": 23,
-    "Calories": 123,
-    "Route": "Volcano"
-  },
-  {
-    "Date": "2021-02-02T00:00:00",
-    "Rider": "Robby",
-    "Time": {
-      "Ticks": 2030000000,
-      "Days": 0,
-      "Hours": 0,
-      "Milliseconds": 0,
-      "Minutes": 3,
-      "Seconds": 23,
-      "TotalDays": 0.002349537037037037,
-      "TotalHours": 0.05638888888888889,
-      "TotalMilliseconds": 203000,
-      "TotalMinutes": 3.3833333333333333,
-      "TotalSeconds": 203
-    },
-    "Distance": 0.34,
-    "Elevation": 4,
-    "Calories": 1,
-    "Route": "Volcano"
-  }
-]
+
+
+    {
+      "Date": "2021-02-02T00:00:00",
+      "Rider": "Robby",
+      "Time": {
+        "Ticks": 2030000000,
+        "Days": 0,
+        "Hours": 0,
+        "Milliseconds": 0,
+        "Minutes": 3,
+        "Seconds": 23,
+        "TotalDays": 0.002349537037037037,
+        "TotalHours": 0.05638888888888889,
+        "TotalMilliseconds": 203000,
+        "TotalMinutes": 3.3833333333333333,
+        "TotalSeconds": 203
+      },
+      "Distance": 0.34,
+      "Elevation": 4,
+      "Calories": 1,
+      "Route": "Volcano"
+    }
+
+
+
+
+
+      ]
