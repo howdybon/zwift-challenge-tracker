@@ -1,0 +1,30 @@
+[
+  {
+    "Title": "Most Time",
+    "Jersey": "White",
+    "Month": "January",
+    "MonthNumber": 1,
+    "Rider":  "Robby"
+  },
+  {
+    "Title": "Greatest Evelation",
+    "Jersey": "Polka Dot",
+    "Month": "February",
+    "MonthNumber": 2,
+    "Rider": "Payton"
+  },
+  {
+    "Title": "Best Time On Route",
+    "Jersey": "Green",
+    "Month": "March",
+    "MonthNumber": 3,
+    "Rider": "Parker"
+  },
+  {
+    "Title": "Total Distance",
+    "Jersey": "Maillot Jaune",
+    "Month": "April",
+    "MonthNumber": 4,
+    "Rider": "Parker"
+  }
+]

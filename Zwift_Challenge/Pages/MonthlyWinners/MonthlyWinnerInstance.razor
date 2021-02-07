@@ -1,0 +1,34 @@
+﻿@using Data
+
+
+<div style="border: 3px red double;">
+    <div>Contest Title: @Winner.Title</div>
+    <div>Month: @Winner.Month</div>
+    <div>Rider: @Winner.Rider</div>
+
+    @if (Winner.Jersey == "White")
+    {
+        <WhiteJersey></WhiteJersey>
+    }
+    @if (Winner.Jersey == "Polka Dot")
+    {
+        <PolkaDotJersey></PolkaDotJersey>
+    }
+    @if (Winner.Jersey == "Green")
+    {
+        <GreenJersey></GreenJersey>
+    }
+    @if (Winner.Jersey == "Maillot Jaune")
+    {
+        <MaillotJaune></MaillotJaune>
+    }
+
+</div>
+
+
+
+
+@code {
+    [Parameter]
+    public ContestWinner Winner { get; set; }
+}

@@ -4,12 +4,14 @@ using System.IO;
 using System.Text.Json;
 using System.Threading.Tasks;
 using System.Text.Json;
+using System.Linq;
 
 namespace Zwift_Challenge.Data
 {
     public class ZwiftChallengeService
     {
         private static readonly string _workoutFilePath = @"Data/WorkoutDataRecords.json";
+        private static readonly string _contestFilePath = @"Data/ContestWinners.json";
         private static readonly string[] Contestants = new[]
        {
             "Payton", "Robby", "Parker"
@@ -39,6 +41,17 @@ namespace Zwift_Challenge.Data
         {
             var textToSave = JsonSerializer.Serialize(workoutDataRecords);
             await File.WriteAllTextAsync(_workoutFilePath, textToSave);
+        }
+
+        public async Task<List<ContestWinner>> GetContestsWinners()
+        {
+            var textFromFile = await File.ReadAllTextAsync(_contestFilePath);
+
+            var toReturn = JsonSerializer.Deserialize<List<ContestWinner>>(textFromFile);
+
+            toReturn = toReturn.OrderByDescending(r => r.MonthNumber).ToList();
+
+            return toReturn;
         }
 
     }
