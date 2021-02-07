@@ -4,27 +4,41 @@
     "Jersey": "White",
     "Month": "January",
     "MonthNumber": 1,
-    "Rider":  "Robby"
+    "Rider": "Robby"
   },
   {
     "Title": "Greatest Evelation",
     "Jersey": "Polka Dot",
     "Month": "February",
     "MonthNumber": 2,
-    "Rider": "Payton"
+    "Rider": "Unknown"
   },
   {
     "Title": "Best Time On Route",
     "Jersey": "Green",
     "Month": "March",
     "MonthNumber": 3,
-    "Rider": "Parker"
+    "Rider": "Unknown"
   },
   {
     "Title": "Total Distance",
     "Jersey": "Maillot Jaune",
     "Month": "April",
     "MonthNumber": 4,
-    "Rider": "Parker"
+    "Rider": "Unknown"
+  },
+  {
+    "Title": "Most Time",
+    "Jersey": "White",
+    "Month": "May",
+    "MonthNumber": 5,
+    "Rider": "Unknown"
+  },
+  {
+    "Title": "Greatest Evelation",
+    "Jersey": "Polka Dot",
+    "Month": "June",
+    "MonthNumber": 6,
+    "Rider": "Unknown"
   }
 ]
