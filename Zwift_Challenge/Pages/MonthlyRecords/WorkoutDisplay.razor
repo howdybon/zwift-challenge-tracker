@@ -33,7 +33,7 @@
     [CascadingParameter]
     public string Month { get; set; } = "January";
 
-    private IEnumerable<WorkoutData> workouts;
+    private IEnumerable<WorkoutData> workouts = new List<WorkoutData>();
 
     protected override async Task OnParametersSetAsync()
     {
@@ -42,7 +42,7 @@
 
     private async Task<IEnumerable<WorkoutData>> GetWorkouts()
     {
-        return await _zwiftChallengeService.GetWorkoutsByMonth(Month);
+        return await _zwiftChallengeService.GetWorkoutFiles();
     }
 
 }

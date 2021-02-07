@@ -1,11 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Text.Json;
 using System.Threading.Tasks;
+using System.Text.Json;
 
 namespace Zwift_Challenge.Data
 {
     public class ZwiftChallengeService
     {
+        private static readonly string _workoutFilePath = @"Data/WorkoutDataRecords.json";
         private static readonly string[] Contestants = new[]
        {
             "Payton", "Robby", "Parker"
@@ -22,52 +26,20 @@ namespace Zwift_Challenge.Data
             return winner;
         }
 
-        public async Task<IEnumerable<WorkoutData>> GetWorkoutsByMonth(string month)
+        public async Task<List<WorkoutData>> GetWorkoutFiles()
         {
-            var toReturn = GetMockData();
+            var textFromFile = await File.ReadAllTextAsync(_workoutFilePath);
+                
+            var toReturn =  JsonSerializer.Deserialize<List<WorkoutData>>(textFromFile);
+
             return toReturn;
         }
 
-        private IEnumerable<WorkoutData> GetMockData()
+        public async Task SaveWorkoutRecords(List<WorkoutData> workoutDataRecords)
         {
-            var toReturn = new List<WorkoutData>();
-
-            var newWorkout = new WorkoutData
-            {
-                Calories = 1234,
-                Elevation = 234,
-                Time = new TimeSpan(2, 23, 23),
-                Date = new DateTime(2021, 2, 2),
-                Distance = (float)78.34,
-                Rider = "Parker",
-                Route = "Volcano"
-            };
-            toReturn.Add(newWorkout);
-
-            toReturn.Add( new WorkoutData
-            {
-                Calories = 123,
-                Elevation = 23,
-                Time = new TimeSpan(0, 23, 23),
-                Date = new DateTime(2021, 2, 2),
-                Distance = (float)7.34,
-                Rider = "Payton",
-                Route = "Volcano"
-            });
-
-            toReturn.Add(new WorkoutData
-            {
-                Calories = 1,
-                Elevation = 4,
-                Time = new TimeSpan(0, 3, 23),
-                Date = new DateTime(2021, 2, 2),
-                Distance = (float)0.34,
-                Rider = "Robby",
-                Route = "Volcano"
-            });
-
-            
-            return toReturn;
+            var textToSave = JsonSerializer.Serialize(workoutDataRecords);
+            await File.WriteAllTextAsync(_workoutFilePath, textToSave);
         }
+
     }
 }
