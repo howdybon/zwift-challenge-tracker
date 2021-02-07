@@ -17,6 +17,11 @@
         <WorkoutRow WorkoutData="workout"></WorkoutRow>
     }
 
+    <div style="border: 1px solid black; background: lightgrey;">
+        <button @onclick="(() => AddNewWorkout(newWorkout))">Add This Workout:</button>
+        <WorkoutRow WorkoutData="newWorkout"></WorkoutRow>
+    </div>
+
     <RadzenGrid Count="3" Data="@workouts" AllowSorting="true" TItem="WorkoutData">
         <Columns>
             <RadzenGridColumn TItem="WorkoutData" Property="Rider" Title="Rider" />
@@ -33,16 +38,22 @@
     [CascadingParameter]
     public string Month { get; set; } = "January";
 
-    private IEnumerable<WorkoutData> workouts = new List<WorkoutData>();
+    private IList<WorkoutData> workouts = new List<WorkoutData>();
+    private WorkoutData newWorkout = new WorkoutData();
 
     protected override async Task OnParametersSetAsync()
     {
         workouts = await GetWorkouts();
     }
 
-    private async Task<IEnumerable<WorkoutData>> GetWorkouts()
+    private async Task<IList<WorkoutData>> GetWorkouts()
     {
         return await _zwiftChallengeService.GetWorkoutFiles();
     }
 
+    private async Task AddNewWorkout(WorkoutData workoutData)
+    {
+        workouts.Add(workoutData);
+        await _zwiftChallengeService.SaveWorkoutRecords(workouts);
+    }
 }

@@ -35,7 +35,7 @@ namespace Zwift_Challenge.Data
             return toReturn;
         }
 
-        public async Task SaveWorkoutRecords(List<WorkoutData> workoutDataRecords)
+        public async Task SaveWorkoutRecords(IList<WorkoutData> workoutDataRecords)
         {
             var textToSave = JsonSerializer.Serialize(workoutDataRecords);
             await File.WriteAllTextAsync(_workoutFilePath, textToSave);
