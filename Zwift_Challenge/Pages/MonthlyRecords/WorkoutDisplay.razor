@@ -48,7 +48,7 @@
 
     private async Task<IList<WorkoutData>> GetWorkouts()
     {
-        return await _zwiftChallengeService.GetWorkoutFiles();
+        return await _zwiftChallengeService.GetWorkoutRecords();
     }
 
     private async Task AddNewWorkout(WorkoutData workoutData)

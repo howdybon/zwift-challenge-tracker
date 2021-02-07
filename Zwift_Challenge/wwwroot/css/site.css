@@ -185,4 +185,9 @@ app {
         background: red;
         border: 3px dashed green;
     }
+
+    .workout-row-cell {
+        background: blue;
+        color: gold;
+    }
 }

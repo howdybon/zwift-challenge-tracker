@@ -26,7 +26,7 @@ namespace Zwift_Challenge.Data
             return winner;
         }
 
-        public async Task<List<WorkoutData>> GetWorkoutFiles()
+        public async Task<List<WorkoutData>> GetWorkoutRecords()
         {
             var textFromFile = await File.ReadAllTextAsync(_workoutFilePath);
                 

@@ -5,13 +5,14 @@
     grid-template-columns: repeat(6, auto); 
     margin: 10px;">
 
-    <div class="workout-row-cell-style">
+    <div class="workout-row-cell">
         @WorkoutData.Rider
     </div>
-    <div class="workout-row-cell-style">
+    <div class="workout-row-cell workout-row-cell-style">
         @WorkoutData.Date.ToShortDateString()
     </div>
-    <div class="workout-row-cell-style">
+    <div class="workout-row-cell workout-row-cell-style"
+         style="background: black; color: greenyellow;">
         @WorkoutData.Distance
     </div>
     <div class="workout-row-cell-style">
