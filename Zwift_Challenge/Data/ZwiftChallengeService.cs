@@ -30,7 +30,7 @@ namespace Zwift_Challenge.Data
 
         public async Task<List<WorkoutData>> GetWorkoutRecords()
         {
-            var textFromFile = await File.ReadAllTextAsync(_workoutFilePath);
+            var textFromFile = File.ReadAllText(_workoutFilePath);
                 
             var toReturn =  JsonSerializer.Deserialize<List<WorkoutData>>(textFromFile);
 
@@ -45,7 +45,7 @@ namespace Zwift_Challenge.Data
 
         public async Task<List<ContestWinner>> GetContestsWinners()
         {
-            var textFromFile = await File.ReadAllTextAsync(_contestFilePath);
+            var textFromFile = File.ReadAllText(_contestFilePath);
 
             var toReturn = JsonSerializer.Deserialize<List<ContestWinner>>(textFromFile);
 

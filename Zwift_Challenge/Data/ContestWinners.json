@@ -40,5 +40,47 @@
     "Month": "June",
     "MonthNumber": 6,
     "Rider": "Unknown"
+  },
+  {
+    "Title": "Best Time On Route",
+    "Jersey": "Green",
+    "Month": "July",
+    "MonthNumber": 7,
+    "Rider": "Unknown"
+  },
+  {
+    "Title": "Best Time On Route",
+    "Jersey": "Maillot Jaune",
+    "Month": "August",
+    "MonthNumber": 8,
+    "Rider": "Unknown"
+  },
+  {
+    "Title": "Best Time On Route",
+    "Jersey": "White",
+    "Month": "September",
+    "MonthNumber": 9,
+    "Rider": "Unknown"
+  },
+  {
+    "Title": "Best Time On Route",
+    "Jersey": "Polka Dot",
+    "Month": "October",
+    "MonthNumber": 10,
+    "Rider": "Unknown"
+  },
+  {
+    "Title": "Best Time On Route",
+    "Jersey": "Green",
+    "Month": "November",
+    "MonthNumber": 11,
+    "Rider": "Unknown"
+  },
+  {
+    "Title": "Best Time On Route",
+    "Jersey": "Maillot Jaune",
+    "Month": "December",
+    "MonthNumber": 12,
+    "Rider": "Unknown"
   }
 ]
